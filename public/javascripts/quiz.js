@@ -34,12 +34,33 @@ let currentQuestionIndex = 0;
 let correctCount = 0;
 let wrongCount = 0;
 
+let quizTimer = document.querySelector('.header .time p');
+
+let start = Date.now();
+let maxTime = 1200;
+
 function startQuiz()
 {
 	if (!nameInput.value) return;
 
 	questionScreen.classList.remove('hidden');
 	startScreen.classList.add('hidden');
+
+	start = Date.now();
+	setInterval(() =>
+	{
+		let delta = Date.now() - start;
+		let seconds = Math.floor(delta / 1000);
+		let timeLeft = maxTime - seconds;
+		if (timeLeft < 0)
+		{
+			endQuiz();
+		} else
+		{
+			quizTimer.innerHTML = Math.floor(timeLeft / 60) + ":" + ((timeLeft % 60).toString().length == 1 ? "0" + (timeLeft % 60) : (timeLeft % 60));
+		}
+
+	}, 200);
 
 	displayQuestion(currentQuestionIndex);
 }
