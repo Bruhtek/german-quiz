@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		Quiz
+	</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel='stylesheet' href='/stylesheets/quiz.css' />
+	<script src="/javascripts/quiz.js" defer></script>
+</head>
+
+<body>
+	<div class="container start-screen">
+		<h1>
+			Deutsch-Quiz
+		</h1>
+		<form action="get">
+			<input id="name-input" type="text" name="username" placeholder="Name">
+			<input id="start-button" type="submit" value="Beginn">
+		</form>
+	</div>
+	<div class="container question-screen hidden">
+		<div class="header">
+			<div class="score">
+				<p><span class="good">0</span> / <span class="bad">0</span> - <span class="proc">0%</span></p>
+			</div>
+			<div class="time">
+				<p>20:00</p>
+			</div>
+		</div>
+		<div class="question-container">
+			<div class="title">
+				<p>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+				</p>
+			</div>
+			<div class="answer">
+				<div class="abcd hidden">
+					<p class="ansA"></p>
+					<p class="ansB"></p>
+					<p class="ansC"></p>
+					<p class="ansD"></p>
+				</div>
+				<div class="write hidden">
+					<input type="text" name="Answer">
+					<div class="write-submit-btn">Zatwierdź</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container finish-screen hidden">
+		<h1>
+			Koniec!
+		</h1>
+		<h2>
+			Twój wynik to:
+		</h2>
+		<div class="score">
+			<h3 class="good"></h3>
+			<h3 class="bad"></h3>
+		</div>
+		<p>co daje</p>
+		<h2 class="proc"></h2>
+	</div>
+</body>
+
+</html>

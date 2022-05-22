@@ -1,0 +1,253 @@
+h1 {
+	font-size: 5em;
+}
+
+.container {
+	width: 100%;
+}
+
+form {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+input {
+	display: block;
+	margin: auto;
+
+	&[type="text"] {
+		background-color: var(--bg2);
+		padding: 32px;
+		border-radius: 40px;
+		border: 5px solid var(--blue);
+		color: var(--fg);
+		font-size: 40px;
+	}
+
+	&[type="submit"] {
+		margin-top: 1em;
+		font-size: 40px;
+		padding: 0.5em;
+		border-radius: 1em;
+		border: 5px solid var(--blue);
+		background-color: var(--bg2);
+		color: var(--fg);
+		cursor: pointer;
+		transition: 0.3s all;
+
+		&:hover {
+			background-color: var(--blue);
+			color: var(--bg2);
+		}
+
+		&:disabled {
+			background-color: #ccc;
+			color: var(--blue);
+		}
+	}
+}
+
+
+.hidden {
+	opacity: 0 !important;
+	z-index: -1 !important;
+}
+
+.disabled {
+	display: none;
+}
+
+.start-screen {
+	position: absolute;
+	transition: 1s all;
+}
+
+.finish-screen {
+	z-index: 10;
+	position: absolute;
+	transition: 1s all;
+	width: 100%;
+	height: 100%;
+	display: block;
+	font-size: 48px;
+	display: flex;
+	flex-direction: column;
+	place-content: center;
+	place-items: center;
+}
+
+.score {
+	.good {
+		color: var(--green);
+	}
+
+	.bad {
+		color: var(--red);
+	}
+}
+
+.question-screen {
+	position: absolute;
+	z-index: 10;
+	transition: 1s all;
+
+	font-size: 32px;
+	width: 100%;
+	height: 100%;
+	display: block;
+
+	>.header {
+		width: 100%;
+		height: 10%;
+		background-color: var(--bg2);
+		border-radius: 0 0 1em 1em;
+
+		>div {
+			text-align: center;
+			width: calc(100%/2);
+			height: 100%;
+			display: inline-flex;
+			float: left;
+			place-content: center;
+			place-items: center;
+			font-size: 48px;
+			text-overflow: ellipsis;
+			word-wrap: normal;
+			white-space: nowrap;
+			overflow: hidden;
+
+			>p {
+				user-select: none;
+				display: inline;
+				margin: 0;
+				padding: 5px;
+				width: 100%;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+
+	>.question-container {
+		clear: both;
+		height: 80%;
+		width: 100%;
+
+		.title {
+			margin: auto;
+			border-radius: 1em;
+			width: 100%;
+			height: 20%;
+			margin-top: 5%;
+			margin-bottom: 5%;
+			background-color: var(--bg2);
+			display: flex;
+			place-content: center;
+			place-items: center;
+			font-size: 48px;
+			user-select: none;
+		}
+
+		.answer {
+			border-radius: 1em;
+			margin: auto;
+			width: 100%;
+			height: 75%;
+			background-color: var(--bg2);
+			position: relative;
+
+			>.abcd {
+				z-index: 1;
+				opacity: 1;
+				transition: 1s all;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				padding: 5%;
+				row-gap: 5%;
+
+				p {
+					user-select: none;
+					color: var(--bg1);
+					margin: auto;
+					display: flex;
+					place-content: center;
+					place-items: center;
+					font-size: 36px;
+					width: 100%;
+					height: 100%;
+					background-color: var(--fg);
+					border-radius: 1em;
+					cursor: pointer;
+					transition: 0.3s all;
+
+					&:active {
+						background-color: var(--blue);
+						color: var(--fg);
+					}
+
+					&.correct {
+						background-color: var(--green);
+						color: var(--bg1);
+					}
+
+					&.wrong {
+						background-color: var(--red);
+						color: var(--bg1);
+					}
+				}
+			}
+
+			.write {
+				z-index: 1;
+				opacity: 1;
+				transition: 1s all;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				padding: 5%;
+
+				>input {
+					background-color: var(--bg1);
+
+					&.correct {
+						background-color: var(--green);
+						color: var(--bg1);
+					}
+
+					&.wrong {
+						background-color: var(--red);
+						color: var(--bg1);
+					}
+				}
+
+				>.write-submit-btn {
+					background-color: var(--blue);
+					color: var(--bg1);
+					border-radius: 1em;
+					padding: 0.5em;
+					font-size: 40px;
+					cursor: pointer;
+					transition: 0.3s all;
+
+					&.correct {
+						background-color: var(--green);
+						color: var(--bg1);
+					}
+
+					&.wrong {
+						background-color: var(--red);
+						color: var(--bg1);
+					}
+				}
+			}
+		}
+	}
+}

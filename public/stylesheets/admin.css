@@ -1,0 +1,42 @@
+.message {
+  color: var(--red);
+  font-size: 1.5em;
+}
+
+form {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+form input {
+  display: block;
+  margin: auto;
+}
+
+form input[type="password"] {
+  background-color: var(--bg2);
+  padding: 0.5em;
+  border-radius: 1em;
+  border: 3px solid var(--blue);
+  color: var(--fg);
+  font-size: 1.25em;
+}
+
+form input[type="submit"] {
+  margin-top: 1em;
+  font-size: 1.25em;
+  padding: 0.5em;
+  border-radius: 1em;
+  border: 3px solid var(--blue);
+  background-color: var(--bg2);
+  color: var(--fg);
+  cursor: pointer;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--blue);
+  color: var(--bg2);
+}
+/*# sourceMappingURL=admin.css.map */

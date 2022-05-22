@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --bg1: #1a1b26;
+  --bg2: #414868;
+  --fg: #c0caf5;
+  --red: #f7768e;
+  --orange: #ff9e64;
+  --yellow: #e0af68;
+  --green: #9ece6a;
+  --blue: #7aa2f7;
+  --magenta: #bb9af7;
+}
+
+body {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: var(--fg);
+  background-color: var(--bg1);
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  min-height: 100vh;
+  margin: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+a {
+  color: #00B7FF;
+}
+/*# sourceMappingURL=style.css.map */

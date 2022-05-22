@@ -1,0 +1,154 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	place-content: center;
+	place-items: center;
+}
+
+.scores {
+	min-width: 100%;
+	min-height: 4em;
+	border-radius: 2em;
+	border: 0.2em solid var(--fg);
+	padding: 1em;
+}
+
+.score {
+	display: flex;
+	margin-bottom: 1em;
+
+	>.name {
+		background-color: var(--fg);
+		color: var(--bg1);
+		border-radius: 1em;
+		margin-right: 0.5em;
+		width: 200px;
+		overflow: scroll;
+
+		>.top {
+			height: 2em;
+			width: 100%;
+			padding-left: 1em;
+			padding-right: 1em;
+			display: flex;
+			place-items: center;
+			place-content: center;
+		}
+
+		>.bottom {
+			height: 2em;
+			width: 100%;
+			display: flex;
+			place-items: center;
+			place-content: center;
+			background-color: var(--bg2);
+			color: var(--fg);
+			border-bottom-left-radius: 1em;
+			border-bottom-right-radius: 1em;
+
+			span {
+				&.good {
+					color: var(--green);
+				}
+
+				&.bad {
+					color: var(--red);
+				}
+			}
+		}
+	}
+
+	>.questions {
+		display: flex;
+		place-items: center;
+		place-content: center;
+		justify-items: start;
+		justify-content: start;
+		gap: 0.5em;
+
+		>.question {
+			cursor: pointer;
+			height: 3em;
+			width: 3em;
+			border-radius: 50%;
+			display: flex;
+			place-content: center;
+			place-items: center;
+			font-size: 1em;
+
+			.fa-solid {
+				color: var(--bg1);
+			}
+
+			&.good {
+				background-color: var(--green);
+			}
+
+			&.bad {
+				background-color: var(--red);
+			}
+
+			&.unknown {
+				background-color: var(--bg2);
+			}
+		}
+	}
+}
+
+.blur {
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.question-info {
+	text-align: center;
+	z-index: 3;
+	border-radius: 2em;
+	padding: 2em;
+	position: absolute;
+	background-color: var(--bg2);
+	min-width: 30%;
+	min-height: 30%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	place-content: space-evenly;
+}
+
+table.question-answers {
+	width: calc(100% - 1em);
+	border-collapse: collapse;
+	border-radius: 1em;
+	border-style: hidden;
+	box-shadow: 0 0 0 3px var(--blue);
+	margin: 0.5em;
+	text-align: left;
+	overflow: scroll;
+
+	tr {
+		td {
+			padding: 0.5em;
+			border: 3px solid var(--blue);
+		}
+
+		&.good {
+			color: var(--green);
+		}
+
+		&.bad {
+			color: var(--red);
+		}
+
+		&.unknown {
+			color: #aaa;
+		}
+	}
+}
