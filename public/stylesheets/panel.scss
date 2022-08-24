@@ -116,7 +116,7 @@
 	min-height: 30%;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -40%);
 	display: flex;
 	flex-direction: column;
 	place-items: center;
@@ -134,7 +134,7 @@ table.question-answers {
 	overflow: scroll;
 
 	tr {
-		td {
+		td, th {
 			padding: 0.5em;
 			border: 3px solid var(--blue);
 		}

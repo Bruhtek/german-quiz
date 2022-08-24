@@ -7,13 +7,11 @@ form {
   margin-top: 2em;
   margin-bottom: 2em;
 }
-
 form input {
   display: block;
   margin: auto;
 }
-
-form input[type="password"] {
+form input[type=password] {
   background-color: var(--bg2);
   padding: 0.5em;
   border-radius: 1em;
@@ -21,8 +19,7 @@ form input[type="password"] {
   color: var(--fg);
   font-size: 1.25em;
 }
-
-form input[type="submit"] {
+form input[type=submit] {
   margin-top: 1em;
   font-size: 1.25em;
   padding: 0.5em;
@@ -31,12 +28,11 @@ form input[type="submit"] {
   background-color: var(--bg2);
   color: var(--fg);
   cursor: pointer;
-  -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
-
-form input[type="submit"]:hover {
+form input[type=submit]:hover {
   background-color: var(--blue);
   color: var(--bg2);
 }
+
 /*# sourceMappingURL=admin.css.map */
